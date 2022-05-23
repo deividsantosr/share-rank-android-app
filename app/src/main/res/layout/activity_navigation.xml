@@ -29,6 +29,7 @@
             android:layout_gravity="bottom"
             android:layout_margin="15dp"
             android:text="Logout"
+            android:textAllCaps="false"
             app:cornerRadius="0dp" />
     </com.google.android.material.navigation.NavigationView>
 </androidx.drawerlayout.widget.DrawerLayout>

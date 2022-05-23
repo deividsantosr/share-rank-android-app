@@ -7,12 +7,13 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.location.Location;
 import android.os.Bundle;
-import android.service.controls.templates.RangeTemplate;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -32,11 +33,17 @@ import com.google.android.libraries.places.widget.listener.PlaceSelectionListene
 
 import java.util.Arrays;
 
-public class MapsFragment extends Fragment {
+public class PlacesFragment extends Fragment {
 
     private GoogleMap mMap;
     private LatLng sydney = new LatLng(-34, 151);
     private SupportMapFragment mapFragment;
+
+    private TextView locationNameText;
+    private TextView locationAddressText;
+    private ImageView imageView;
+
+    private static final String MAPS_API_KEY = "AIzaSyAaSAfET0ZXLFgpwKBlhRcLDPb9cN5LNJI";
 
     private Button button;
 
@@ -68,12 +75,12 @@ public class MapsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_maps, container, false);
+        return inflater.inflate(R.layout.fragment_places, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        Places.initialize(view.getContext(), "AIzaSyAaSAfET0ZXLFgpwKBlhRcLDPb9cN5LNJI");
+        Places.initialize(view.getContext(), MAPS_API_KEY);
 
         super.onViewCreated(view, savedInstanceState);
         SupportMapFragment mapFragmentView =
@@ -86,26 +93,29 @@ public class MapsFragment extends Fragment {
             setupAutoCompleteFragment();
         }
 
-        Button b = (Button) view.findViewById(R.id.rate);
-        Button r = (Button) view.findViewById(R.id.review);
+        Button reviewButton = (Button) view.findViewById(R.id.review);
+        Button rateBtn = (Button) view.findViewById(R.id.rate);
+        locationNameText = view.findViewById(R.id.location_name);
+        locationAddressText = view.findViewById(R.id.location_address);
+        imageView = view.findViewById(R.id.imageView);
 
-        b.setOnClickListener(new View.OnClickListener() {
+        reviewButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment fragment = new RateFragment();
+                Fragment fragment = new ViewReviewFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.nav_host_fragment, fragment); // fragmen container id in first parameter is the  container(Main layout id) of Activity
+                transaction.replace(R.id.nav_host_fragment, fragment); // fragment container id in first parameter is the  container(Main layout id) of Activity
                 transaction.addToBackStack(null);  // this will manage backstack
                 transaction.commit();
             }
         });
 
-        r.setOnClickListener(new View.OnClickListener() {
+        rateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Fragment fragment = new RateFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.nav_host_fragment, fragment); // fragmen container id in first parameter is the  container(Main layout id) of Activity
+                transaction.replace(R.id.nav_host_fragment, fragment); // fragment container id in first parameter is the  container(Main layout id) of Activity
                 transaction.addToBackStack(null);  // this will manage backstack
                 transaction.commit();
             }
@@ -121,7 +131,13 @@ public class MapsFragment extends Fragment {
                     public void onSuccess(Location location) {
                         // Got last known location. In some rare situations this can be null.
                         if (location != null) {
-                            sydney = new LatLng(location.getLatitude(), location.getLongitude());
+//                            sydney = new LatLng(location.getLatitude(), location.getLongitude());
+
+                            sydney = new LatLng(-23.6291715, -46.71082579999999);
+                            locationNameText.setText("Mercado Carrefour");
+                            locationAddressText.setText("Av. das Nações Unidas, 15187 - Cidade Monções, São Paulo - SP");
+                            new DownloadImageTask(imageView).execute("https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=" + "Aap_uEDsVMGRk8SY4PUXRqh9__4bH6MxmKzCpmhlA2gYeHRA5_77JREA-VlXf6b7L_qtST6xkzCg4lnac6FyMuARnq_KaJuHOC8lSVgyNgdO7sB491kF5jFaQIfqJwGfbT6e2xQCsS92-qibhVjUbnb7khIcoi97rOYFTwTgFy_HAkw6moTI" + "&key=" + MAPS_API_KEY);
+
                             mapFragment.getMapAsync(callback);
                         }
                     }
@@ -137,7 +153,10 @@ public class MapsFragment extends Fragment {
         autocompleteFragment.setPlaceFields(Arrays.asList(
                 Place.Field.ID,
                 Place.Field.NAME,
-                Place.Field.LAT_LNG
+                Place.Field.ADDRESS,
+                Place.Field.LAT_LNG,
+                Place.Field.PHOTO_METADATAS,
+                Place.Field.PHOTO_METADATAS
         ));
 
         // Set up a PlaceSelectionListener to handle the response.
@@ -145,7 +164,16 @@ public class MapsFragment extends Fragment {
             @Override
             public void onPlaceSelected(@NonNull Place place) {
                 sydney = place.getLatLng();
+                locationNameText.setText(place.getName());
+                locationAddressText.setText(place.getAddress());
                 mapFragment.getMapAsync(callback);
+
+                try {
+                    String photoReference = place.getPhotoMetadatas().get(0).zza();
+                    new DownloadImageTask(imageView).execute("https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=" + photoReference + "&key=" + MAPS_API_KEY);
+                } catch (Exception ex) {
+                    new DownloadImageTask(imageView).execute("https://mapbiomas.org/assets/camaleon_cms/image-not-found-4a963b95bf081c3ea02923dceaeb3f8085e1a654fc54840aac61a57a60903fef.png");
+                }
             }
 
             @Override

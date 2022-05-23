@@ -7,28 +7,28 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.fragment.app.Fragment;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
-public class RateFragment extends Fragment {
+public class ViewReviewFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_rate, container, false);
+        return inflater.inflate(R.layout.fragment_view_review, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        Button publishBtn = (Button) view.findViewById(R.id.publishBtn);
+        Button backBtn = (Button) view.findViewById(R.id.backBtn);
 
-        publishBtn.setOnClickListener(new View.OnClickListener() {
+        backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(view.getContext(), "Avaliado com sucesso!", Toast.LENGTH_LONG).show();
+                getActivity().onBackPressed();
             }
         });
     }

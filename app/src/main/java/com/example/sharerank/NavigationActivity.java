@@ -7,10 +7,13 @@ import android.view.Menu;
 import android.widget.Button;
 
 import com.example.sharerank.ui.login.LoginActivity;
+import com.example.sharerank.ui.top10.Top10Fragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -71,5 +74,21 @@ public class NavigationActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    public void onClickReview(View v) {
+        Fragment fragment = new ViewReviewFragment();
+        FragmentTransaction transaction = Top10Fragment.top10FragmentTransaction;
+        transaction.replace(R.id.nav_host_fragment, fragment); // fragment container id in first parameter is the  container(Main layout id) of Activity
+        transaction.addToBackStack(null);  // this will manage backstack
+        transaction.commit();
+    }
+
+    public void onClickRate(View v) {
+        Fragment fragment = new RateFragment();
+        FragmentTransaction transaction = Top10Fragment.top10FragmentTransaction;
+        transaction.replace(R.id.nav_host_fragment, fragment); // fragment container id in first parameter is the  container(Main layout id) of Activity
+        transaction.addToBackStack(null);  // this will manage backstack
+        transaction.commit();
     }
 }

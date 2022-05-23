@@ -1,27 +1,28 @@
 <resources>
     <string name="app_name">Share Rank</string>
     <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+    <string name="prompt_email">E-mail</string>
+    <string name="prompt_password">Senha</string>
+    <string name="action_register">Registrar</string>
+    <string name="action_sign_in">Entrar</string>
+    <string name="action_sign_in_short">Entrar</string>
+    <string name="welcome">"Bem Vindo! "</string>
+    <string name="invalid_username">Nome de usuário inválido</string>
+    <string name="invalid_password">A senha deve ter >5 caracteres</string>
+    <string name="login_failed">"Falha na autenticação"</string>
     <string name="title_activity_navigation">NavigationActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Deivid Santos</string>
+    <string name="nav_header_subtitle">deivid.santos@fmu.edu.br</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_maps">Maps</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="menu_profile">Perfil</string>
+    <string name="menu_help">Ajuda</string>
+    <string name="menu_top10">Top 10</string>
+    <string name="menu_places">Localizar</string>
+    <string name="title_activity_places">Localizar</string>
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>
@@ -34,5 +35,5 @@
     <string name="sync_title">Sync email periodically</string>
     <string name="attachment_title">Download incoming attachments</string>
     <string name="attachment_summary_on">Automatically download attachments for incoming emails</string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>ti
 </resources>
