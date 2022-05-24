@@ -30,6 +30,7 @@ public class RateFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(view.getContext(), "Avaliado com sucesso!", Toast.LENGTH_LONG).show();
+                getActivity().onBackPressed();
             }
         });
     }
