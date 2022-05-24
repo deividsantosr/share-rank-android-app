@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/et_custom"
+        android:hint="Nome"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        android:text="Deivid Santos"
+        android:textSize="16sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/et_custom"
+        android:enabled="false"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:padding="15dp"
+        android:text="deivid.santos@fmu.edu.br"
+        android:textSize="16sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/et_custom"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:text="123456"
+        android:textSize="16sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/et_custom"
+        android:hint="Data de Nascimento"
+        android:inputType="datetime"
+        android:padding="15dp"
+        android:text="26/09/1996"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="50dp"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="15dp"
+        android:text="Editar"
+        android:textAllCaps="false"
+        android:textSize="18dp"
+        app:cornerRadius="50dp"></Button>
+</LinearLayout>

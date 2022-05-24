@@ -135,8 +135,8 @@ public class PlacesFragment extends Fragment {
 
                             sydney = new LatLng(-23.6291715, -46.71082579999999);
                             locationNameText.setText("Mercado Carrefour");
-                            locationAddressText.setText("Av. das Nações Unidas, 15187 - Cidade Monções, São Paulo - SP");
-                            new DownloadImageTask(imageView).execute("https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=" + "Aap_uEDsVMGRk8SY4PUXRqh9__4bH6MxmKzCpmhlA2gYeHRA5_77JREA-VlXf6b7L_qtST6xkzCg4lnac6FyMuARnq_KaJuHOC8lSVgyNgdO7sB491kF5jFaQIfqJwGfbT6e2xQCsS92-qibhVjUbnb7khIcoi97rOYFTwTgFy_HAkw6moTI" + "&key=" + MAPS_API_KEY);
+                            locationAddressText.setText("Av. das Nações Unidas, 15187 - Chácara Santo Antônio");
+                            new DownloadImageTask(imageView).execute("https://lh5.googleusercontent.com/p/AF1QipNObPvz1j-9VA3C8uHOSNMsO66xQ0Rt8poenL2S=w408-h306-k-no");
 
                             mapFragment.getMapAsync(callback);
                         }
@@ -170,7 +170,7 @@ public class PlacesFragment extends Fragment {
 
                 try {
                     String photoReference = place.getPhotoMetadatas().get(0).zza();
-                    new DownloadImageTask(imageView).execute("https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=" + photoReference + "&key=" + MAPS_API_KEY);
+                    new DownloadImageTask(imageView).execute("https://maps.googleapis.com/maps/api/place/photo?maxheight=200&photoreference=" + photoReference + "&key=" + MAPS_API_KEY);
                 } catch (Exception ex) {
                     new DownloadImageTask(imageView).execute("https://mapbiomas.org/assets/camaleon_cms/image-not-found-4a963b95bf081c3ea02923dceaeb3f8085e1a654fc54840aac61a57a60903fef.png");
                 }

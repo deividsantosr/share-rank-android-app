@@ -1,24 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    tools:context=".ui.top10.Top10Fragment">-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/text_slideshow"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="8dp"-->
-<!--        android:layout_marginTop="8dp"-->
-<!--        android:layout_marginEnd="8dp"-->
-<!--        android:textAlignment="center"-->
-<!--        android:textSize="20sp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -66,14 +46,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
-                    android:text="Nome do Lugar"
+                    android:text="Hospital Santa Paula"
                     android:textColor="@color/black"
                     android:textSize="17dp"></TextView>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nome do Lugar"
+                    android:text="Av. Santo Amaro, 2468 - Brooklin, São Paulo - SP"
                     android:textColor="@color/black"
                     android:textSize="13dp"></TextView>
 
@@ -84,7 +64,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="2dp"
                     android:progressTint="@color/quantum_yellowA700"
-                    android:rating="4"
+                    android:rating="5"
                     android:scaleX=".99"
                     android:scaleY=".99"
                     android:secondaryProgressTint="@android:color/transparent"
@@ -163,14 +143,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
-                    android:text="Nome do Lugar"
+                    android:text="Mercado Carrefour"
                     android:textColor="@color/black"
                     android:textSize="17dp"></TextView>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nome do Lugar"
+                    android:text="Av. das Nações Unidas, 15187 - Chácara Santo Antônio"
                     android:textColor="@color/black"
                     android:textSize="13dp"></TextView>
 
@@ -260,14 +240,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
-                    android:text="Nome do Lugar"
+                    android:text="Academia Bio Ritmo"
                     android:textColor="@color/black"
                     android:textSize="17dp"></TextView>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nome do Lugar"
+                    android:text="R. José Guerra, 111 - Santo Amaro, São Paulo - SP"
                     android:textColor="@color/black"
                     android:textSize="13dp"></TextView>
 
@@ -357,14 +337,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
-                    android:text="Nome do Lugar"
+                    android:text="Centro Administrativo Santo Amaro"
                     android:textColor="@color/black"
                     android:textSize="17dp"></TextView>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nome do Lugar"
+                    android:text="Av. Alfredo Egídio de Souza Aranha, 100 - Vila Cruzeiro"
                     android:textColor="@color/black"
                     android:textSize="13dp"></TextView>
 
@@ -454,14 +434,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
-                    android:text="Nome do Lugar"
+                    android:text="Mercure Hotel"
                     android:textColor="@color/black"
                     android:textSize="17dp"></TextView>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nome do Lugar"
+                    android:text="Rua Professor Manoelito de Ornellas, 104 - Chácara Santo Antônio"
                     android:textColor="@color/black"
                     android:textSize="13dp"></TextView>
 
@@ -551,14 +531,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
-                    android:text="Nome do Lugar"
+                    android:text="Swift"
                     android:textColor="@color/black"
                     android:textSize="17dp"></TextView>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nome do Lugar"
+                    android:text="Av. Professor Alceu Maynard Araújo, 345 - Lojas 1 e 2"
                     android:textColor="@color/black"
                     android:textSize="13dp"></TextView>
 
@@ -648,14 +628,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
-                    android:text="Nome do Lugar"
+                    android:text="Restaurante Massa Fina"
                     android:textColor="@color/black"
                     android:textSize="17dp"></TextView>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nome do Lugar"
+                    android:text="Av. João Carlos da Silva Borges, 897 - Granja Julieta"
                     android:textColor="@color/black"
                     android:textSize="13dp"></TextView>
 
@@ -745,14 +725,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
-                    android:text="Nome do Lugar"
+                    android:text="Padaria e Confeitaria Flor da Laguna"
                     android:textColor="@color/black"
                     android:textSize="17dp"></TextView>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nome do Lugar"
+                    android:text="R. Laguna, 832 - Santo Amaro, São Paulo - SP"
                     android:textColor="@color/black"
                     android:textSize="13dp"></TextView>
 
@@ -763,7 +743,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="2dp"
                     android:progressTint="@color/quantum_yellowA700"
-                    android:rating="4"
+                    android:rating="3"
                     android:scaleX=".99"
                     android:scaleY=".99"
                     android:secondaryProgressTint="@android:color/transparent"
@@ -842,14 +822,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
-                    android:text="Nome do Lugar"
+                    android:text="SPSH - Helbor São Paulo South House"
                     android:textColor="@color/black"
                     android:textSize="17dp"></TextView>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nome do Lugar"
+                    android:text="R. Carmo do Rio Verde, 109 - Jardim Caravelas"
                     android:textColor="@color/black"
                     android:textSize="13dp"></TextView>
 
@@ -860,7 +840,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="2dp"
                     android:progressTint="@color/quantum_yellowA700"
-                    android:rating="4"
+                    android:rating="3"
                     android:scaleX=".99"
                     android:scaleY=".99"
                     android:secondaryProgressTint="@android:color/transparent"
@@ -940,14 +920,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
-                    android:text="Nome do Lugar"
+                    android:text="Tokio Marine Hall"
                     android:textColor="@color/black"
                     android:textSize="17dp"></TextView>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nome do Lugar"
+                    android:text="R. Bragança Paulista, 1281 - Várzea de Baixo"
                     android:textColor="@color/black"
                     android:textSize="13dp"></TextView>
 
@@ -958,7 +938,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="2dp"
                     android:progressTint="@color/quantum_yellowA700"
-                    android:rating="4"
+                    android:rating="3"
                     android:scaleX=".99"
                     android:scaleY=".99"
                     android:secondaryProgressTint="@android:color/transparent"

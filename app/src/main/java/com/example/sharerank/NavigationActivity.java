@@ -4,7 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.sharerank.ui.login.LoginActivity;
 import com.example.sharerank.ui.top10.Top10Fragment;
@@ -90,5 +94,23 @@ public class NavigationActivity extends AppCompatActivity {
         transaction.replace(R.id.nav_host_fragment, fragment); // fragment container id in first parameter is the  container(Main layout id) of Activity
         transaction.addToBackStack(null);  // this will manage backstack
         transaction.commit();
+    }
+
+    public void onClickCounter(View view) {
+        Button currentButton = (Button) view;
+        ViewGroup parent = (ViewGroup) view.getParent();
+
+        TextView counterTextView = (TextView) parent.getChildAt(1);
+
+        int value = Integer.parseInt(counterTextView.getText().toString());
+        int newValue = 0;
+
+        if (currentButton.getText().toString().equals("-")) {
+            newValue = Math.max(--value, 0);
+        } else {
+            newValue = Math.min(++value, 99);
+        }
+
+        counterTextView.setText(String.format("%02d", newValue));
     }
 }

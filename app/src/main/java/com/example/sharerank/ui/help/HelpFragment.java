@@ -1,6 +1,7 @@
 package com.example.sharerank.ui.help;
 
 import android.os.Bundle;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,12 +25,7 @@ public class HelpFragment extends Fragment {
                 new ViewModelProvider(this).get(HelpViewModel.class);
         View root = inflater.inflate(R.layout.fragment_help, container, false);
         final TextView textView = root.findViewById(R.id.text_gallery);
-        helpViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        textView.setText(Html.fromHtml("Entre em contato com nosso time<br><br> <a href=\"mailto:contato@sharerank.com.br\">contato@sharerank.com.br</a>"));
         return root;
     }
 }
