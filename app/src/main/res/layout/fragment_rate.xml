@@ -320,7 +320,7 @@
                     android:layout_gravity="center_vertical"
                     android:gravity="center_horizontal"
                     android:paddingTop="12dp"
-                    android:text="Calçada"
+                    android:text="Calçada Adaptada"
                     android:textSize="18dp" />
             </LinearLayout>
 
@@ -363,7 +363,7 @@
                     android:layout_gravity="center_vertical"
                     android:gravity="center_horizontal"
                     android:paddingTop="12dp"
-                    android:text="Escada"
+                    android:text="Escada Adaptada"
                     android:textSize="18dp" />
             </LinearLayout>
 
