@@ -48,7 +48,6 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/decreaseBtn"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:insetLeft="0dp"
@@ -119,7 +118,6 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/decreaseBtn"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:insetLeft="0dp"
@@ -190,7 +188,6 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/decreaseBtn"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:insetLeft="0dp"
