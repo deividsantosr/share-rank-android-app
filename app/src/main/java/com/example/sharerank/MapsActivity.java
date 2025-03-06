@@ -38,7 +38,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Places.initialize(getApplicationContext(), "AIzaSyAaSAfET0ZXLFgpwKBlhRcLDPb9cN5LNJI");
+        Places.initialize(getApplicationContext(), "<API-KEY>"); //I disabled the old key...
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
